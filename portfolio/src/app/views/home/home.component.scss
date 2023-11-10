@@ -1,6 +1,6 @@
 
 :root {
- 
+
     --fs-1: 2rem;
     --fs-2: calc(1.813rem + 1vw);
     --fs-3: calc(1.313rem + 1vw);
@@ -8,12 +8,8 @@
     --fs-5: 1rem;
     --fs-6: 0.813rem;
     --fs-7: 0.75rem;
-  
     --fw-400: 400;
     --fw-700: 700;
-  
-   
-    --section-padding: 80px;  
   }
   
   body.dark_theme {
@@ -97,9 +93,6 @@
   }
   
   body.active { overflow: hidden; }
-  
-  
-  
   
   
   /*-----------------------------------*\
@@ -208,9 +201,6 @@
     transition: 0.25s ease-in-out;
     z-index: 1;
   }
-  
-  
-  
   
   
   /*-----------------------------------*\
