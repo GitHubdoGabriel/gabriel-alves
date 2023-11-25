@@ -1,6 +1,5 @@
 
 :root {
-
     --fs-1: 2rem;
     --fs-2: calc(1.813rem + 1vw);
     --fs-3: calc(1.313rem + 1vw);
@@ -417,6 +416,11 @@
   }
   
   .hero .btn-primary { margin-inline: auto; }
+  
+  .hero .btn-primary:hover { 
+    background-color: white;
+    color: #000000;
+  }
   
   
   
