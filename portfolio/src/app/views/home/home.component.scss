@@ -218,7 +218,7 @@
   
   .header.active {
     padding-block: 12px;
-    background: var(--bg-secondary);
+    background: rgb(255, 255, 255);
     box-shadow: var(--shadow-1);
   }
   
@@ -266,7 +266,7 @@
   .theme-btn {
     padding: 4px;
     width: 48px;
-    background: var(--bg-secondary);
+    background: rgb(255, 255, 255);
     border-radius: 100px;
     transition: 0.25s ease-in-out;
   }
@@ -320,7 +320,7 @@
   
   .navbar {
     position: fixed;
-    background: var(--bg-secondary);
+    background: rgb(255, 255, 255);
     top: 100%;
     left: 0;
     width: 100%;
@@ -439,7 +439,7 @@
   }
   
   .stats-card {
-    background: var(--bg-secondary);
+    background: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -517,7 +517,7 @@
   .skills-content { margin-bottom: 50px; }
   
   .skills-toggle {
-    background: var(--bg-secondary);
+    background: rgb(255, 255, 255);
     position: relative;
     width: max-content;
     margin-inline: auto;
@@ -533,9 +533,9 @@
     content: "";
     position: absolute;
     top: 5px;
-    left: 5px;
+    left: 15px;
     bottom: 5px;
-    width: 93px;
+    width: 100px;
     background: #e38445;
     border-radius: 100px;
     transition: 0.25s ease-in-out;
@@ -543,8 +543,8 @@
   }
   
   .skills-toggle.active::before {
-    left: 98px;
-    width: 94px;
+    left: 143px;
+    width: 100px;
   }
   
   .toggle-btn {
@@ -578,7 +578,7 @@
   
   .skill-card {
     position: relative;
-    background: var(--bg-secondary);
+    background: rgb(255, 255, 255);
     width: 80px;
     height: 80px;
     display: grid;
@@ -593,8 +593,21 @@
     opacity: 1;
   }
   
-  
-  
+  .python-logo{
+    height: 42px;
+  }
+
+  .php-logo{
+    height: 35px;
+  }
+
+  .postman-logo{
+    height: 60px;
+  }
+
+  .sql-server-logo, .github-logo, .mysql-logo, .power-bi-logo, .notion-logo, .flutter-logo, .vercel-logo, .xampp-logo, .nestjs-logo{
+    height: 45px;
+  }
   
   
   /*-----------------------------------*\
@@ -734,7 +747,7 @@
   }
   
   .contact-form {
-    background: var(--bg-secondary);
+    background:rgb(255, 255, 255);
     padding: 20px;
     border-radius: 12px;
     box-shadow: var(--shadow-1);
@@ -789,7 +802,7 @@
   }
   
   .footer {
-    background: var(--bg-secondary);
+    background: rgb(255, 255, 255);
     padding-block: 20px;
     text-align: center;
     box-shadow: var(--shadow-1);
