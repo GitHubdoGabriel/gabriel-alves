@@ -1,0 +1,16 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    background: radial-gradient(circle, #ff9639, #d67e30);
+    height: 370px;
+    justify-content: end;
+}
+
+.linkedin-iframe{
+    display: flex;
+    justify-content: end;
+}
+
+.badge-base{
+    margin: 30px 100px 0px 0px;
+}
