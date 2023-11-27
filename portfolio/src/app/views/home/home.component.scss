@@ -14,7 +14,7 @@
   body.dark_theme {
     --bg-primary: hsl(0, 0%, 12%);
     --bg-secondary: hsl(0, 0%, 19%);
-    --color-primary: #ffffff255;
+    --color-primary: #ffffff;
     --color-secondary: hsl(0, 0%, 62%);
     --card-shadow: hsla(0, 0%, 0%, 0.4);
     --input-bg: hsl(0, 0%, 16%);
@@ -77,7 +77,7 @@
   }
   
   ::selection {
-    background: var(--color-primary);
+    background: #ffffff;
     color: var(--bg-primary);
   }
   
@@ -109,7 +109,7 @@
   .h2,
   .h3,
   .h4 {
-    color: var(--color-primary);
+    color: #e38445;
     font-family: 'Poppins', sans-serif;
     line-height: 1.2;
   }
@@ -129,7 +129,7 @@
   
   .btn {
     max-width: max-content;
-    color: var(--color-primary);
+    color: #ffffff;
     font-weight: var(--fw-700);
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -139,18 +139,42 @@
     transition: 0.25s ease-in-out;
   }
   
-  .btn-primary { border-color: var(--color-primary); }
-  
-  .btn-primary:is(:hover, :focus) {
-    background: var(--color-primary);
-    color: var(--bg-primary);
+  .btn-primary { 
+    border-color: #ffffff; }
+
+  .btn-group  .btn-primary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #65c9ff;
+    color: #000000;
+  } 
+
+  .btn-group  .btn-primary:hover{
+    background: #0097e8;
+    border-color: #ffffff;
+    color: #ffffff;
   }
   
   .btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #e38445;
     border-color: #e38445;
     color: #000000;
   }
+  
+  .btn-secondary:hover {
+    background: #e38445;
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+
+  .btn-group  .btn-secondary mat-icon{
+    margin-left: 10px;
+  } 
+
   
   .btn-secondary:is(:hover, :focus) { --raw-seinna: hsl(24, 74%, 64%); }
   
@@ -236,7 +260,7 @@
   }
   
   .logo a {
-    color: var(--color-primary);
+    color: #ffffff;
     font-family: "Saira Stencil One", sans-serif; 
   }
   
@@ -254,13 +278,13 @@
   }
   
   .navbar-actions select {
-    color: var(--color-primary);
+    color: #ffffff;
     width: 45px;
   }
   
   .navbar-actions option {
     background: var(--bg-primary);
-    color: var(--color-primary);
+    color: #ffffff;
   }
   
   .theme-btn {
@@ -279,7 +303,7 @@
     width: 20px;
     height: 20px;
     border-radius: 50px;
-    box-shadow: inset 9px -6px var(--color-primary);
+    box-shadow: inset 9px -6px #ffffff;
     transition: 0.25s ease-in-out;
   }
   
@@ -300,7 +324,7 @@
   .nav-toggle-btn span {
     width: 20px;
     height: 2px;
-    background: var(--color-primary);
+    background: #ffffff;
     margin: 5px;
     transition: 0.25s ease-in-out;
   }
@@ -349,7 +373,7 @@
     position: relative;
     width: max-content;
     margin-inline: auto;
-    color: var(--color-primary);
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-size: var(--fs-1);
     padding: 10px;
@@ -411,15 +435,25 @@
   .hero-content { max-width: 450px; }
   
   .hero-title {
+    color: white;
     text-align: center;
     margin-bottom: 30px;
+    text-shadow: 6px 4px 18px rgba(0, 0, 0, 0.507);
+    padding: 10px;
   }
   
-  .hero .btn-primary { margin-inline: auto; }
+  .hero .btn-primary { 
+    margin-inline: auto;
+    background-color: rgba(255, 255, 255, 0.268);
+    border-color: white;
+    color: white;
+    padding: 20px 55px;    
+  }
   
   .hero .btn-primary:hover { 
-    background-color: white;
-    color: #000000;
+    background-color: rgba(255, 255, 255, 0.727);
+    border-color: #e38445;
+    color: #e38445;
   }
   
   
@@ -473,7 +507,7 @@
   
   .stats-card .card-title strong {
     display: block;
-    color: var(--color-primary);
+    color: #e38445;
     font-size: initial;
     line-height: 1.3;
     margin-top: 5px;
@@ -548,7 +582,7 @@
   }
   
   .toggle-btn {
-    color: var(--color-primary);
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
     padding: 5px 25px;
     transition: 0.25s ease-in-out;
@@ -660,7 +694,7 @@
   
   .project-card .publish-date {
     font-size: var(--fs-6);
-    color: var(--color-primary);
+    color: #ffffff;
     transition-delay: 0s;
   }
   
@@ -699,7 +733,7 @@
   
   .contact-item-icon {
     font-size: 25px;
-    color: var(--color-primary);
+    color: #e38445;
   }
   
   .contact-item-icon ion-icon { --ionicon-stroke-width: 40px; }
@@ -713,7 +747,7 @@
     transition: 0.25s ease-in-out;
   }
   
-  .contact-info:not(address):is(:hover, :focus) { color: var(--color-primary); }
+  .contact-info:not(address):is(:hover, :focus) { color: #ffffff; }
   
   .contac-social-list {
     display: flex;
@@ -726,7 +760,7 @@
   
   .contact-social-link {
     position: relative;
-    background: var(--color-primary);
+    background: #ffffff;
     color: var(--bg-primary);
     width: 35px;
     height: 35px;
@@ -756,7 +790,7 @@
   .form-wrapper { margin-bottom: 25px; }
   
   .form-label {
-    color: var(--color-primary);
+    color: #e38445;
     font-size: var(--fs-7);
     font-family: 'Poppins', sans-serif;
     margin-bottom: 8px;
@@ -766,7 +800,7 @@
   .input-wrapper { position: relative; }
   
   .input-field {
-    background: var(--input-bg);
+    background: rgb(216, 216, 216);
     color: #e38445;
     padding: 10px;
     padding-left: 40px;
@@ -795,10 +829,23 @@
   .input-field:focus + ion-icon { color: #e38445; }
   
   .contact .btn-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: unset;
     width: 100%;
-    background: var(--color-primary);
+    background: #e38445;
+    border: #000000;
     color: var(--bg-primary);
+  }
+  
+  .contact .btn-primary:hover {
+    border-color: white;
+    color: white;
+  }
+
+  .contact .btn-primary mat-icon{
+    margin-left: 10px;
   }
   
   .footer {
@@ -829,8 +876,8 @@
     display: grid;
     place-items: center;
     font-size: 20px;
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+    color: #ffffff;
+    border: 2px solid #ffffff;
     border-radius: 50%;
     opacity: 0;
     pointer-events: none;
@@ -1027,7 +1074,7 @@
       transition: 0.25s ease-in-out;
     }
   
-    .hero-social-link:is(:hover, :focus) { color: var(--color-primary); }
+    .hero-social-link:is(:hover, :focus) { color: #ffffff; }
   
     .hero-social-link .tooltip {
       --trans-x: 10px;
