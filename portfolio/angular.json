@@ -37,9 +37,7 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": [
-              "https://platform.linkedin.com/badges/js/profile.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
