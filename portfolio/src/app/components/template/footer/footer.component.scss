@@ -1,12 +1,16 @@
 .main{
     display: flex;
     flex-direction: row;
-    background-color: #62676c;
-    height: 370px;
-    justify-content: end;
+    background-color: #e38445;
+    height: 350px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 50px;
 }
 
 .linkedin-iframe{
+    width: 50%;
     display: flex;
     justify-content: end;
 }
@@ -14,3 +18,41 @@
 .badge-base{
     margin: 30px 100px 0px 0px;
 }
+
+.last-message{
+    width: 50%;
+}
+
+.last-message .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content p{
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+}
+
+.content p:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+.rights p{
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+}
+
+.rights{
+    margin-top: 15px;
+}
+

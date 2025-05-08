@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  name: string = '';
+  phone: string = '';
+  message: string = '';
 
   constructor() { }
 
@@ -112,5 +115,14 @@ export class HomeComponent implements OnInit {
       document.body.classList.remove("light_theme");
       document.body.classList.add("dark_theme");
     }
+  }
+
+  sendEmail() {
+    console.log('name: ', this.name)
+    console.log('phone: ', this.phone)
+    console.log('message: ', this.message)
+
+    const mailtoLink = `mailto:gabriel.alves.gas@hotmail.com?subject=Contato&body=${this.message}%0A%0A${this.name} - ${this.phone}`;
+    window.location.href = mailtoLink;
   }
 }

@@ -473,7 +473,7 @@
   }
   
   .stats-card {
-    background: rgb(255, 255, 255);
+    background: #65c9ff;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -482,6 +482,7 @@
     box-shadow: var(--shadow-1);
     transition: 0.25s ease-in-out;
   }
+
   
   .stats-card:is(:hover, :focus) { transform: translateY(-5px); }
   
@@ -501,13 +502,12 @@
   
   .stats-card .card-title {
     width: calc(100% - 95px);
-    color: #e38445;
+    color: #ffffff;
     text-align: center;
   }
   
   .stats-card .card-title strong {
     display: block;
-    color: #e38445;
     font-size: initial;
     line-height: 1.3;
     margin-top: 5px;
@@ -552,6 +552,7 @@
   
   .skills-toggle {
     background: rgb(255, 255, 255);
+    background-color: #d8d8d8;
     position: relative;
     width: max-content;
     margin-inline: auto;
@@ -639,7 +640,7 @@
     height: 60px;
   }
 
-  .sql-server-logo, .github-logo, .mysql-logo, .power-bi-logo, .notion-logo, .flutter-logo, .vercel-logo, .xampp-logo, .nestjs-logo{
+  .sql-server-logo, .github-logo, .mysql-logo, .power-bi-logo, .notion-logo, .flutter-logo, .vercel-logo, .xampp-logo, .nestjs-logo, .linux-logo, .django-logo, .flask-logo, .postgre-logo, .aws-logo, .node-logo{
     height: 45px;
   }
   
@@ -747,7 +748,7 @@
     transition: 0.25s ease-in-out;
   }
   
-  .contact-info:not(address):is(:hover, :focus) { color: #ffffff; }
+  .contact-info:not(address):is(:hover, :focus) { color: #65c9ff; }
   
   .contac-social-list {
     display: flex;
@@ -785,9 +786,7 @@
     padding: 20px;
     border-radius: 12px;
     box-shadow: var(--shadow-1);
-  }
-  
-  .form-wrapper { margin-bottom: 25px; }
+  } 
   
   .form-label {
     color: #e38445;
@@ -884,6 +883,8 @@
     transform: translateY(10px);
     transition: 0.25s ease-in-out;
     z-index: 2;
+    box-shadow: 5px 5px 10px #a6a6a6;
+    background: #e38445;
   }
   
   .go-top.active {
