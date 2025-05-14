@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('carouselList', { static: true }) carouselList!: ElementRef;
+
+  //Projects
+  currentIndex = 0;
+  totalItems = 4;
+
   name: string = '';
   phone: string = '';
   message: string = '';
@@ -118,11 +124,30 @@ export class HomeComponent implements OnInit {
   }
 
   sendEmail() {
-    console.log('name: ', this.name)
-    console.log('phone: ', this.phone)
-    console.log('message: ', this.message)
-
     const mailtoLink = `mailto:gabriel.alves.gas@hotmail.com?subject=Contato&body=${this.message}%0A%0A${this.name} - ${this.phone}`;
     window.location.href = mailtoLink;
+  }
+
+  prevSlide(): void {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+    } else {
+      this.currentIndex = this.totalItems - 1;
+    }
+    this.updateCarousel();
+  }
+
+  nextSlide(): void {
+    if (this.currentIndex < this.totalItems - 1) {
+      this.currentIndex++;
+    } else {
+      this.currentIndex = 0;
+    }
+    this.updateCarousel();
+  }
+
+  updateCarousel(): void {
+    const offset = -this.currentIndex * 100; 
+    this.carouselList.nativeElement.style.transform = `translateX(${offset}%)`;
   }
 }

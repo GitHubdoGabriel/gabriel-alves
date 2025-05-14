@@ -649,72 +649,134 @@
    * #PROJECT
   \*-----------------------------------*/
   
-  .project { padding-block: 80px; }
-  
-  .project-list > li { margin-bottom: 25px; }
-  
-  .project-card {
+  .carousel {
     position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 2px 4px 6px hsla(0, 0%, 0%, 0.2);
-  }
-  
-  .project-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    transition: 0.25s ease-in-out;
-  }
-  
-  .project-card:is(:hover, :focus)::after {
-    background: hsla(0, 0%, 100%, 0.1);
-    backdrop-filter: blur(0.5px);
-  }
-  
-  .project-card .card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    padding: 20px;
+    margin: auto;
+    overflow: hidden;
   }
   
-  .project-card .card-title { margin-bottom: 10px; }
-  
-  .project-card :is(.card-title, .publish-date) {
-    background: var(--bg-primary);
-    padding: 6px 12px;
-    width: max-content;
+  .carousel-list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .carousel-list li, img{
+    border-radius: 10px;
     box-shadow: var(--shadow-1);
-    transform: translateY(20px);
-    opacity: 0;
-    transition: 0.25s ease-in-out;
+  }
+
+  .carousel-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-primary);
+  }
+
+  .carousel-card{
+    width: 800px;
+    height: 500px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-primary);
+    background-color: #65c9ff;
+  }
+
+  .carousel-list img{
+    width: 400px;
+    height: 300px;
+    object-fit: cover; 
+    border-radius: 10px;
+    box-shadow: var(--shadow-1);
   }
   
-  .project-card .publish-date {
-    font-size: var(--fs-6);
-    color: #ffffff;
-    transition-delay: 0s;
+  .carousel-item {
+    min-width: 100%;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
   }
-  
-  .project-card:is(:hover, :focus) :is(.card-title, .publish-date) {
-    transform: translateY(0);
-    opacity: 1;
+
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff59;
+    width: 300px;
+    height: 400px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-1);
   }
-  
-  .project-card:is(:hover, :focus) .publish-date { transition-delay: 0.1s; }
-  
-  .load-more {
-    font-size: var(--fs-4);
+
+  .project-card{
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover{
+    transform: scale(1.01);
+    z-index: 1;
+  }
+
+  .card-title{
     color: #e38445;
-    text-decoration: underline;
-    margin-inline: auto;
+    transition: all 0.5s ease;
   }
   
+  .card-title:hover{
+    transform: scale(1.1);
+    z-index: 1; 
+  }
+
+  .card-tags{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .card-tags .tag-icon{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+  }
   
+  .card-tags .tag-icon:hover{
+    transform: scale(1.5);
+    z-index: 1; 
+  }
   
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .carousel-btn.prev {
+    left: 10px;
+  }
+  
+  .carousel-btn.next {
+    right: 10px;
+  }
   
   
   /*-----------------------------------*\
@@ -901,6 +963,16 @@
       width: auto;
       margin-inline: auto;
     }
+
+    .carousel-card{
+      flex-wrap: wrap;
+      height: 750px;
+    }
+
+    .card-banner img{
+      width: 300px;
+      border-radius: 10px;
+    }
   }
   
   @media (min-width: 550px) {
@@ -911,13 +983,6 @@
     }
   
     .section-title { max-width: 380px; }
-  
-    .project-list {
-      column-count: 2;
-      column-gap: 25px;
-    }
-  
-    .project-list > li:first-child { column-span: all; }
 
     .hero img{
       margin-top: 10px;
@@ -925,6 +990,7 @@
       width: auto;
       margin-inline: auto;
     }
+
   }
   
   @media (min-width: 768px) {
@@ -969,6 +1035,7 @@
     .section-content {
       position: relative;
       padding-left: 40px;
+      margin-bottom: 80px;
     }
   
     .section-subtitle {
@@ -1132,13 +1199,7 @@
     .about-banner { margin-bottom: 0; }
     .skills-content { margin-bottom: 0; } 
     .skills-toggle { margin-inline: 0; }
-    .project-list { column-count: 3; }
-  
-    .project-list > li:first-child {
-      column-span: unset;
-      margin: 25px;
-      margin-left: 0;
-    }
+    
   
     .contact {
       display: grid;
